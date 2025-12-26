@@ -8,7 +8,7 @@ return {
     },
     lazy = false, -- neo-tree will lazily load itself
     config = function()
-      vim.keymap.set("n", "<D-b>", function()
+      vim.keymap.set("n", "<C-b>", function()
         vim.cmd("Neotree toggle reveal right")
       end, { silent = true })
     end
