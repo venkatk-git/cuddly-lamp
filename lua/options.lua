@@ -8,6 +8,8 @@ vim.g.mapleader = " "
 vim.opt.number = true
 vim.opt.relativenumber = true
 
+vim.opt.termguicolors = true
+
 vim.o.scrolloff = 10
 vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
 
@@ -35,6 +37,18 @@ vim.api.nvim_create_autocmd('TextYankPost', {
     vim.hl.on_yank()
   end,
 })
+
+-- Haskell higlighter options (haskell-vim)
+vim.g.haskell_enable_quantification = 1
+vim.g.haskell_enable_recursivedo = 1
+vim.g.haskell_enable_arrowsyntax = 1
+vim.g.haskell_enable_pattern_synonyms = 1
+vim.g.haskell_enable_typeroles = 1
+vim.g.haskell_enable_static_pointers = 1
+vim.g.haskell_indent_if = 3
+vim.g.haskell_indent_case = 2
+vim.g.haskell_indent_let = 4
+vim.g.haskell_indent_where = 6
 
 -- Ctrl + L → delete character to the right
 vim.keymap.set("i", "<C-l>", "<Del>", { desc = "Delete char to the right" })
